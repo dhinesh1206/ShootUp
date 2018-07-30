@@ -5744,7 +5744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dac7465244afbd42a8600036a1d28e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToActivate: 18
+  timeToActivate: 14
   thrust: 60
   stopForceTime: 3
   forceAngle: {x: 0, y: -4}
@@ -5772,7 +5772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dac7465244afbd42a8600036a1d28e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToActivate: 18
+  timeToActivate: 14
   thrust: 60
   stopForceTime: 3
   forceAngle: {x: -2, y: -4}
@@ -5950,7 +5950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dac7465244afbd42a8600036a1d28e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToActivate: 10
+  timeToActivate: 7
   thrust: 60
   stopForceTime: 3
   forceAngle: {x: -2, y: -4}
@@ -6233,7 +6233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentageOfSizeToReduce: 80
-  hitCount: 16
+  hitCount: 12
   defaultHitCount: 0
   easetype: 24
   particals: 0
@@ -6495,7 +6495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dac7465244afbd42a8600036a1d28e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToActivate: 10
+  timeToActivate: 7
   thrust: 60
   stopForceTime: 3
   forceAngle: {x: 2, y: -4}
@@ -6779,7 +6779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dac7465244afbd42a8600036a1d28e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToActivate: 10
+  timeToActivate: 7
   thrust: 60
   stopForceTime: 3
   forceAngle: {x: 0, y: -4}
@@ -6926,7 +6926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dac7465244afbd42a8600036a1d28e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToActivate: 18
+  timeToActivate: 14
   thrust: 60
   stopForceTime: 3
   forceAngle: {x: 2, y: -4}

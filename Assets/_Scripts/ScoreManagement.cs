@@ -6,20 +6,29 @@ using DG.Tweening;
 
 public class ScoreManagement : MonoBehaviour {
 
-    public float scoreMultiplier, score,highScore,CoinsCollectedSoFar,CoinsCollected;
-    public Text scoreText,gameOverScoreText,gameoverHighScoreText,gameOverCoinText,gameOverTotalCoinText;
+    public static ScoreManagement instance;
+
+    public float scoreMultiplier, score,highScore,CoinsCollectedSoFar,CoinsCollected,defaultRestartCost,retryCost;
+    public Text scoreText,gameOverScoreText,gameoverHighScoreText,gameOverCoinText,gameOverTotalCoinText,retrycostText;
     bool highscoreReached;
+    public GameObject notEnoughGold;
 
     private void Start()
     {
         highScore = PlayerPrefs.GetFloat("HighScore");
+        retryCost = defaultRestartCost * UpgradeManager.instance.damageUpgradeLevel * UpgradeManager.instance.intervalUpgradeLevel;
     }
 
+    private void Awake()
+    {
+        instance = this;
+    }
     private void OnEnable()
     {
         EventManager.instance.On_ScoreAdd += On_ScoreAdd;
         EventManager.instance.On_GameOver += On_GameOver;
         EventManager.instance.On_LevelCreate += On_LevelCreate;
+        EventManager.instance.On_LevelReload += On_LevelReload;
     }
 
     private void OnDisable()
@@ -27,12 +36,19 @@ public class ScoreManagement : MonoBehaviour {
         EventManager.instance.On_ScoreAdd -= On_ScoreAdd;
         EventManager.instance.On_GameOver -= On_GameOver;
         EventManager.instance.On_LevelCreate -= On_LevelCreate;
+        EventManager.instance.On_LevelReload -= On_LevelReload;
     }
 
     private void On_ScoreAdd()
     {
         score += scoreMultiplier * UpgradeManager.instance.hitCount;
         ScoreAdd();
+    }
+
+    void On_LevelReload()
+    {
+        score = 0;
+        scoreText.text = score.ToString();
     }
 
 
@@ -69,7 +85,7 @@ public class ScoreManagement : MonoBehaviour {
 
     private void On_LevelCreate()
     {
-        
+        retryCost += 50;
     }
 
     private void On_GameOver()
@@ -96,9 +112,10 @@ public class ScoreManagement : MonoBehaviour {
         {
             gameoverHighScoreText.text = (highScore / 1000).ToString() + "k";
         }
-        CoinsCollectedSoFar = PlayerPrefs.GetFloat("Total_Coins", 2000);
+        CoinsCollectedSoFar = PlayerPrefs.GetFloat("Total_Coins", 0);
         gameOverTotalCoinText.text = CoinsCollectedSoFar.ToString();
         PlayerPrefs.SetFloat("HighScore", highScore);
+        retrycostText.text = "$" + Mathf.Round(retryCost).ToString();
         CoinAnimation();
     }
 
@@ -144,4 +161,19 @@ public class ScoreManagement : MonoBehaviour {
         PlayerPrefs.SetFloat("Total_Coins", CoinsCollectedSoFar);
     }
 
+
+    public void RetryLevel()
+    {
+        CoinsCollectedSoFar = PlayerPrefs.GetFloat("Total_Coins", 0);
+        print(retryCost < CoinsCollectedSoFar);
+        if(retryCost < CoinsCollectedSoFar) 
+        {
+            CoinsCollected -= retryCost;
+            PlayerPrefs.SetFloat("Total_Coins", CoinsCollectedSoFar);
+            EventManager.instance.OnClearObjects();
+        } else 
+        {
+            notEnoughGold.SetActive(true);
+        }
+    }
 }

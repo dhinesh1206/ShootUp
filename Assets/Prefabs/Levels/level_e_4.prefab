@@ -2946,7 +2946,7 @@ TextMesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1063906605054948}
-  m_Text: Level_e4
+  m_Text: Level_50
   m_OffsetZ: 0
   m_CharacterSize: 0.02
   m_LineSpacing: 1
@@ -3616,7 +3616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentageOfSizeToReduce: 60
-  hitCount: 8
+  hitCount: 4
   defaultHitCount: 0
   easetype: 24
   particals: 2
@@ -3702,7 +3702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentageOfSizeToReduce: 60
-  hitCount: 8
+  hitCount: 4
   defaultHitCount: 0
   easetype: 24
   particals: 2
@@ -3839,7 +3839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentageOfSizeToReduce: 60
-  hitCount: 8
+  hitCount: 4
   defaultHitCount: 0
   easetype: 24
   particals: 2

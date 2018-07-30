@@ -35,9 +35,16 @@ public class UpgrageMenuDetails : MonoBehaviour {
             highScoreText.text = (highScore / 1000).ToString() + "k";
         }
     }
+
+
+    public void ReloadCurrentLevel()
+    {
+        
+    }
+
     public void UpdateMenu()
 	{
-        float coin = PlayerPrefs.GetFloat("Total_Coins", 2000);
+        float coin = PlayerPrefs.GetFloat("Total_Coins", 0);
         if(coin.ToString().Length <4)
         {
             CurrentCoinText.text = coin.ToString();  
@@ -114,7 +121,5 @@ public class UpgrageMenuDetails : MonoBehaviour {
                 }
             }
         }
-
-
     }
 }

@@ -3238,10 +3238,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentageOfSizeToReduce: 99
-  hitCount: 24
+  hitCount: 20
   defaultHitCount: 0
   easetype: 24
-  particals: 0
+  particals: 1
 --- !u!114 &114148216188915996
 MonoBehaviour:
   m_ObjectHideFlags: 1

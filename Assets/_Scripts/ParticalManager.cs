@@ -8,10 +8,21 @@ public class ParticalManager : MonoBehaviour {
     public static ParticalManager instance;
     public GameObject plus1Partical, imageCanves;
     public Color currentColor;
+    public Text scoreText;
 
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Update()
+    {
+        if(currentColor == Color.black)
+        {
+            scoreText.color = Color.white;
+        } else {
+            scoreText.color = Color.black;
+        }
     }
 
     public void CreatePartical( Vector2 position)

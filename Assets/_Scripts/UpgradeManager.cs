@@ -21,7 +21,7 @@ public class UpgradeManager : MonoBehaviour {
         damageUpgradeValue = PlayerPrefs.GetFloat("Damage_Value",1);
         intervalUpgradeLevel = PlayerPrefs.GetFloat("Interval_level",1);
         intervalUpgradeValue = PlayerPrefs.GetFloat("Interval_Value",0.2f);
-        totalCoins = PlayerPrefs.GetFloat("Total_Coins", 2000);
+        totalCoins = PlayerPrefs.GetFloat("Total_Coins", 0);
 
         if (damageUpgradeLevel > 0)
         {
@@ -51,7 +51,7 @@ public class UpgradeManager : MonoBehaviour {
             } 
             if (cost.upgradeLevel == damageUpgradeLevel -1)
             {
-                float totalCoin = PlayerPrefs.GetFloat("Total_Coins", 2000);
+                float totalCoin = PlayerPrefs.GetFloat("Total_Coins", 0);
                 PlayerPrefs.SetFloat("Total_Coins", (totalCoin - cost.upgradeCost));
             }
 
@@ -90,7 +90,7 @@ public class UpgradeManager : MonoBehaviour {
             }
             if (cost.upgradeLevel == intervalUpgradeLevel - 1)
             {
-                float totalCoin = PlayerPrefs.GetFloat("Total_Coins", 2000);
+                float totalCoin = PlayerPrefs.GetFloat("Total_Coins", 0);
                 PlayerPrefs.SetFloat("Total_Coins", (totalCoin - cost.upgradeCost));
             }
         }

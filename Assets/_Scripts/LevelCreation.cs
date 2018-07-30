@@ -21,6 +21,7 @@ public class LevelCreation : MonoBehaviour {
         EventManager.instance.On_LevelCreate += On_LevelCreate;
         EventManager.instance.On_LevelReload += On_LevelReload;
         EventManager.instance.On_ChallengeCreate += On_ChallengeCreate;
+        EventManager.instance.On_GameOver += On_GameOver;
     }
 
     private void OnDisable()
@@ -28,6 +29,7 @@ public class LevelCreation : MonoBehaviour {
         EventManager.instance.On_LevelReload -= On_LevelReload;
         EventManager.instance.On_LevelCreate -= On_LevelCreate;
         EventManager.instance.On_ChallengeCreate -= On_ChallengeCreate;
+        EventManager.instance.On_GameOver -= On_GameOver;
     }
 
     private void On_LevelCreate()
@@ -74,6 +76,11 @@ public class LevelCreation : MonoBehaviour {
         }
     }
 
+    void On_GameOver()
+    {
+        CancelInvoke();
+    }
+
 
     private void On_LevelReload()
     {
@@ -103,10 +110,12 @@ public class LevelCreation : MonoBehaviour {
 
     public void LevelReload()
     {
+       
         foreach(GameObject levelcreatedbefore in createdLevel)
         {
             if (levelcreatedbefore.name == deadLevel)
             {
+               
                 GameObject levelCreated = Instantiate(levelcreatedbefore, transform, false);
                 levelCreated.transform.SetParent(null);
             }

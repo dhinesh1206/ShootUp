@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClearObjects : MonoBehaviour {
 
     public string levelname;
+    bool ReadyToDestroy;
 
     private void Start()
     {
@@ -34,6 +35,18 @@ public class ClearObjects : MonoBehaviour {
     void Instance_On_ClearObjects()
     {
         Destroy(gameObject);
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.transform.tag == "Level_End")
+        {
+            ReadyToDestroy = true;
+        } else if(collision.transform.tag == "Object_end" && ReadyToDestroy)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

@@ -37,8 +37,8 @@ public class CameraMovement : MonoBehaviour {
     private void On_LevelReload()
     {
         levelSpeedMultiplier = 1;
-        currentPlayer.SetActive(true);
         currentPlayer.transform.localPosition = new Vector3(0,0,10);
+        currentPlayer.SetActive(true);
     }
 
     private void On_GameOver()

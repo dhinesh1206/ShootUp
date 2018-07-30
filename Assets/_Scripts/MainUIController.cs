@@ -118,6 +118,6 @@ public class MainUIController : MonoBehaviour {
 
     public void ReloadGame()
     {
-        EventManager.instance.OnClearObjects();
+        ScoreManagement.instance.RetryLevel();
     }
 }
