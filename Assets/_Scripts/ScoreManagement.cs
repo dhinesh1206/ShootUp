@@ -9,7 +9,7 @@ public class ScoreManagement : MonoBehaviour {
     public static ScoreManagement instance;
 
     public float scoreMultiplier, score,highScore,CoinsCollectedSoFar,CoinsCollected,defaultRestartCost,retryCost;
-    public Text scoreText,gameOverScoreText,gameoverHighScoreText,gameOverCoinText,gameOverTotalCoinText,retrycostText;
+    public Text scoreText,gameOverScoreText,gameoverHighScoreText,retrycostText;
     bool highscoreReached;
     public GameObject notEnoughGold;
 
@@ -113,7 +113,7 @@ public class ScoreManagement : MonoBehaviour {
             gameoverHighScoreText.text = (highScore / 1000).ToString() + "k";
         }
         CoinsCollectedSoFar = PlayerPrefs.GetFloat("Total_Coins", 0);
-        gameOverTotalCoinText.text = CoinsCollectedSoFar.ToString();
+       // gameOverTotalCoinText.text = CoinsCollectedSoFar.ToString();
         PlayerPrefs.SetFloat("HighScore", highScore);
         retrycostText.text = "$" + Mathf.Round(retryCost).ToString();
         CoinAnimation();
@@ -134,14 +134,14 @@ public class ScoreManagement : MonoBehaviour {
         //}
         //StartCoroutine(TotalCoinAnimation(coins));
         CoinsCollected = score;
-        gameOverCoinText.text = CoinsCollected.ToString();
+       // gameOverCoinText.text = CoinsCollected.ToString();
         TotalCoins();
     }
 
     void TotalCoins()
     {
         CoinsCollectedSoFar += score;
-        gameOverTotalCoinText.text = CoinsCollectedSoFar.ToString();
+     //   gameOverTotalCoinText.text = CoinsCollectedSoFar.ToString();
         PlayerPrefs.SetFloat("Total_Coins", CoinsCollectedSoFar);
     }
 
@@ -151,7 +151,7 @@ public class ScoreManagement : MonoBehaviour {
         {
             yield return new WaitForSeconds(0f);
             CoinsCollectedSoFar +=1;
-            gameOverTotalCoinText.text = CoinsCollectedSoFar.ToString();
+         //   gameOverTotalCoinText.text = CoinsCollectedSoFar.ToString();
             //gameOverTotalCoinText.transform.DOScale(1.2f, 0.01f).SetEase(Ease.Linear).OnComplete(() =>
             //{
                
