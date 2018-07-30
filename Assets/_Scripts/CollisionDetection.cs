@@ -55,10 +55,10 @@ public class CollisionDetection : MonoBehaviour {
         if (collision.gameObject.tag == "Bullet")
         {
            
-                hitCount -= collision.GetComponent<BulletMovement>().hitCount * 1.2f;
+                hitCount -= collision.GetComponent<BulletMovement>().hitCount;
                 tm.text = (Mathf.Round( hitCount)).ToString();
                 
-                if (hitCount < 1)
+                if (hitCount <= 0)
                 {
                    // GameObject partical = Instantiate(particals, transform, false);
                    // partical.transform.SetParent(null);
