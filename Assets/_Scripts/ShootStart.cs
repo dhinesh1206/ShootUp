@@ -10,7 +10,7 @@ public class ShootStart : MonoBehaviour {
 
     public float interval;
     public GameObject smallBullets,LargeBullets,tripleBullet,sizeUpBullet,fastBullets;
-    public PhysicsObjectController physicsObject;
+    //public PhysicsObjectController physicsObject;
     public GameObject[] parent;
     public List<BulletSounds> bulletSounds;
     GameObject bullet;

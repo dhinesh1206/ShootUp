@@ -8,7 +8,7 @@ public class ParticalManager : MonoBehaviour {
     public static ParticalManager instance;
     public GameObject plus1Partical, imageCanves;
     public Color currentColor;
-    public Text scoreText;
+    public Text scoreText,LevelText;
 
     private void Awake()
     {
@@ -20,8 +20,10 @@ public class ParticalManager : MonoBehaviour {
         if(currentColor == Color.black)
         {
             scoreText.color = Color.white;
+            LevelText.color = Color.white;
         } else {
             scoreText.color = Color.black;
+            LevelText.color = Color.black;
         }
     }
 

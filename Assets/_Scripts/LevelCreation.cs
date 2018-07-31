@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelCreation : MonoBehaviour {
 
@@ -7,13 +8,19 @@ public class LevelCreation : MonoBehaviour {
 
     public List<GameObject> levelPrefabs,createdLevel,challengeLevels,challengeLevelCreated;
     public float intervalBetweenLevels;
-    public int Index;
+    public int Index,totalLevel;
     public string deadLevel;
+    public Text LevelCountText;
     //GameObject levelCreated,Reload;
 
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        totalLevel = levelPrefabs.Count;
     }
 
     private void OnEnable()
@@ -51,6 +58,8 @@ public class LevelCreation : MonoBehaviour {
             createdLevel.Clear();
             On_LevelCreate();
         }
+
+        LevelCountText.text = createdLevel.Count.ToString() + " / " + totalLevel.ToString();
     }
 
 
