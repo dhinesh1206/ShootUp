@@ -87,7 +87,7 @@ public class LevelCreation : MonoBehaviour {
 
 	private void OnTriggerExit2D(Collider2D collision)
 	{
-        if(collision.gameObject.tag == "Level_End")
+        if(collision.gameObject.tag == "Level_End"&& !ScoreManagement.instance.gameOver)
         {
             Invoke("CreateNextLevel", intervalBetweenLevels);
         }

@@ -1325,6 +1325,7 @@ GameObject:
   - component: {fileID: 114918745544308768}
   - component: {fileID: 114429106040390364}
   - component: {fileID: 58914024905477950}
+  - component: {fileID: 114637249146641658}
   m_Layer: 0
   m_Name: Triple_bullet icon
   m_TagString: Untagged
@@ -10532,6 +10533,18 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1085760475812132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelname: 
+--- !u!114 &114637249146641658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1527407960334604}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}

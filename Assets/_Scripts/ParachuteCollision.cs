@@ -12,7 +12,7 @@ public class ParachuteCollision : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag != "Player" && !hit && !ScoreManagement.instance.gameOver)
+        if(collision.gameObject.tag != "Player" && !hit)
         {
             hit = true;
             LevelCreation.instance.DeathLevel(collision.gameObject.GetComponent<ClearObjects>().levelname);

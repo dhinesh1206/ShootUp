@@ -13,6 +13,7 @@ public class LevelColor : MonoBehaviour {
 
     void ChangeColor()
     {
+        print(levelBackgroundColor == Color.white);
         if (levelBackgroundColor == Color.white)
         {
             ParticalManager.instance.currentColor = levelBackgroundColor;
@@ -20,13 +21,14 @@ public class LevelColor : MonoBehaviour {
         } else 
         {
             int index = Random.Range(0, 2);
+            print(index);
             if(index == 0) 
             {
                 ParticalManager.instance.currentColor = levelBackgroundColor;
                 Camera.main.DOColor(levelBackgroundColor, 1.5f);
             } else {
-                ParticalManager.instance.currentColor = Color.black;
-                Camera.main.DOColor(Color.black, 1.5f);
+                ParticalManager.instance.currentColor = Color.white;
+                Camera.main.DOColor(Color.white, 1.5f);
             }
         }
     }

@@ -34,7 +34,7 @@ public class ParachuteAnimation : MonoBehaviour {
         {
             item.SetActive(true);
         }
-        GetComponent<ParachuteCollision>().hit = false;
+        gameObject.GetComponent<ParachuteCollision>().hit = false;
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
         gameObject.transform.localPosition = new Vector3(0, -8f,10);
@@ -48,7 +48,7 @@ public class ParachuteAnimation : MonoBehaviour {
             item.SetActive(false);
         }
        
-        GetComponent<Rigidbody2D>().gravityScale = 1;
+        gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
     }
 
 }

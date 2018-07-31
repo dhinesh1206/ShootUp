@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 114058133603753678}
   - component: {fileID: 114942789601025830}
   - component: {fileID: 58840341966462244}
+  - component: {fileID: 114818471971097196}
   m_Layer: 0
   m_Name: HeavyBulletIcon
   m_TagString: Untagged
@@ -409,6 +410,7 @@ GameObject:
   - component: {fileID: 114878825378826010}
   - component: {fileID: 114566975102977492}
   - component: {fileID: 58629597520590524}
+  - component: {fileID: 114355578001816272}
   m_Layer: 0
   m_Name: HeavyBulletIcon
   m_TagString: Untagged
@@ -6414,6 +6416,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!114 &114355578001816272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1206458475885588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelname: 
 --- !u!114 &114364753221538466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7472,6 +7486,18 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1025629911188428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelname: 
+--- !u!114 &114818471971097196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1029692660335834}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}
