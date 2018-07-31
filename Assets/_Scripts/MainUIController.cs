@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using GameAnalyticsSDK;
 
 public class MainUIController : MonoBehaviour {
 
     public static MainUIController instance;
 
-    public GameObject mainScreen, ingameScreen, gameOverScreen, reloadScreen,playButton,muteOnButton,muteOffButton;
+    public GameObject mainScreen, ingameScreen, gameOverScreen,playButton,muteOnButton,muteOffButton;
 
 
     private void Awake()
@@ -14,6 +15,8 @@ public class MainUIController : MonoBehaviour {
        // PlayerPrefs.DeleteAll();
         instance = this;
         CheckMute();
+        GameAnalytics.Initialize();
+        Facebook.Unity.FB.Init();
     }
     private void OnEnable()
     {
@@ -43,6 +46,7 @@ public class MainUIController : MonoBehaviour {
 
     private void On_LevelCreate()
     {
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "game");
         playButton.transform.DOScale(15, 0.5f).SetEase(Ease.Linear).OnComplete(() =>
         {
             IngameMenu();
@@ -58,17 +62,11 @@ public class MainUIController : MonoBehaviour {
     {
         mainScreen.SetActive(false);
         ingameScreen.SetActive(true);
-        reloadScreen.SetActive(false);
-    }
-
-    public void ReloadMenu()
-    {
-        ingameScreen.SetActive(false);
-        reloadScreen.SetActive(true);
     }
 
     public void GameOverMenu()
     {
+        
         ingameScreen.SetActive(false);
         gameOverScreen.SetActive(true);
     }

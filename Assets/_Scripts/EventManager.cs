@@ -9,7 +9,7 @@ public class EventManager : MonoBehaviour {
     private void Awake()
     {
         instance = this;
-        Application.targetFrameRate = 120;
+        Application.targetFrameRate = 60;
     }
 
     public void OnLevelCreate()

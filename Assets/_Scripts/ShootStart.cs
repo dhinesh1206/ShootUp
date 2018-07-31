@@ -21,6 +21,14 @@ public class ShootStart : MonoBehaviour {
     {
         instance = this;
         GetComponent<Camera>().enabled = false;
+
+        float aspect = (float)Screen.height / (float)Screen.width;
+
+        print(aspect);
+        if (aspect > 1.8f)
+            GetComponent<Camera>().orthographicSize = 11.85f;
+        else if(aspect < 1.5f)
+            GetComponent<Camera>().orthographicSize = 7.9f;
        // gameObject.SetActive(false);
     }
 

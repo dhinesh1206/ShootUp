@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using Facebook;
+using GameAnalyticsSDK;
 
 public class ScoreManagement : MonoBehaviour {
 
@@ -22,6 +24,8 @@ public class ScoreManagement : MonoBehaviour {
     private void Awake()
     {
         instance = this;
+       // FB.Init();
+
     }
     private void OnEnable()
     {
@@ -90,6 +94,7 @@ public class ScoreManagement : MonoBehaviour {
 
     private void On_GameOver()
     {
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "game", score.ToString());
         Invoke("GameOverScoreDisplay", 2f);
     }
 
@@ -171,6 +176,7 @@ public class ScoreManagement : MonoBehaviour {
             CoinsCollected -= retryCost;
             PlayerPrefs.SetFloat("Total_Coins", CoinsCollectedSoFar);
             EventManager.instance.OnClearObjects();
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "game");
         } else 
         {
             notEnoughGold.SetActive(true);

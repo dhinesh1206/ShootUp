@@ -1990,7 +1990,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 409040633}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2078,8 +2078,6 @@ MonoBehaviour:
   scoreText: {fileID: 1486752088}
   gameOverScoreText: {fileID: 586155062}
   gameoverHighScoreText: {fileID: 352731962}
-  gameOverCoinText: {fileID: 0}
-  gameOverTotalCoinText: {fileID: 0}
   retrycostText: {fileID: 1292316630}
   notEnoughGold: {fileID: 648045110}
 --- !u!4 &414663171
@@ -2200,7 +2198,6 @@ MonoBehaviour:
   mainScreen: {fileID: 2091809980}
   ingameScreen: {fileID: 1856663499}
   gameOverScreen: {fileID: 919590551}
-  reloadScreen: {fileID: 0}
   playButton: {fileID: 251022775}
   muteOnButton: {fileID: 1680963501}
   muteOffButton: {fileID: 718863439}
@@ -3639,7 +3636,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 718639721}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -7086,7 +7083,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1159559622}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -9226,7 +9223,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 165288, guid: a9d27d37bab3c447b8eb7a2a6756e952, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9d27d37bab3c447b8eb7a2a6756e952, type: 2}
@@ -9578,7 +9575,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1802465545}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
