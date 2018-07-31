@@ -2080,6 +2080,7 @@ MonoBehaviour:
   gameoverHighScoreText: {fileID: 352731962}
   retrycostText: {fileID: 1292316630}
   notEnoughGold: {fileID: 648045110}
+  gameOver: 0
 --- !u!4 &414663171
 Transform:
   m_ObjectHideFlags: 0
@@ -6454,6 +6455,10 @@ Prefab:
       propertyPath: m_CompositePaths.m_Paths.Array.data[1].Array.data[35].y
       value: 2.0373766
       objectReference: {fileID: 0}
+    - target: {fileID: 1952105253129138, guid: 58a877112f10b39458297d1067bb6447, type: 2}
+      propertyPath: m_TagString
+      value: Loon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58a877112f10b39458297d1067bb6447, type: 2}
   m_IsPrefabAsset: 0
@@ -7107,7 +7112,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 246660274}
         m_MethodName: SetActive
@@ -7118,7 +7123,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -9307,6 +9312,11 @@ MonoBehaviour:
   - {fileID: 1825279537798184, guid: a85572a2baaf7ca419976df9d7d7aa05, type: 2}
   - {fileID: 1185462604852800, guid: 9e2841917c829c74fa5172f8611f31f3, type: 2}
   - {fileID: 1945401770438836, guid: 30b181c97a27de44aba8b6e45076b1fa, type: 2}
+  - {fileID: 1709747406333042, guid: 64f84bf0b5a260e4f8ca1230e1903ed8, type: 2}
+  - {fileID: 1460669620445358, guid: 61769bb4baaac814f9d96e82db48ffd8, type: 2}
+  - {fileID: 1819352844842896, guid: ba12a69b83fcca14db6f06a77136acba, type: 2}
+  - {fileID: 1571334957475002, guid: acd0b2435d7cf2b41852d70eac9c0801, type: 2}
+  - {fileID: 1422876076966914, guid: 36b5e9109ffd3204f99a61350e74082b, type: 2}
   - {fileID: 1841227916538292, guid: 80fb0f25dbb98214e857caf3f720c4f2, type: 2}
   - {fileID: 1390670787819816, guid: 89a6dc5b39176094fb2daec7846a7d6a, type: 2}
   - {fileID: 1236576340738832, guid: 27c17cf512bdc8843b1cc497d915fd8a, type: 2}
@@ -9317,12 +9327,21 @@ MonoBehaviour:
   - {fileID: 1073613916550520, guid: 133962df95a7a2244811c277e4af535e, type: 2}
   - {fileID: 1153362101482816, guid: 80b68310b19e5d1439ac9a717d93b42b, type: 2}
   - {fileID: 1073962861928752, guid: 6d434e4b6e969604ab32faf9399c0fd2, type: 2}
-  - {fileID: 1709747406333042, guid: 64f84bf0b5a260e4f8ca1230e1903ed8, type: 2}
-  - {fileID: 1460669620445358, guid: 61769bb4baaac814f9d96e82db48ffd8, type: 2}
-  - {fileID: 1819352844842896, guid: ba12a69b83fcca14db6f06a77136acba, type: 2}
-  - {fileID: 1571334957475002, guid: acd0b2435d7cf2b41852d70eac9c0801, type: 2}
-  - {fileID: 1422876076966914, guid: 36b5e9109ffd3204f99a61350e74082b, type: 2}
   - {fileID: 1653448834589864, guid: 06f2f38f144858f4d9de0b473c6f4218, type: 2}
+  - {fileID: 1180105682201146, guid: bffd7fc4bc2aa574ea0db29e5288295a, type: 2}
+  - {fileID: 1955689009021274, guid: 5f6c89308b3e24043922956452b04eca, type: 2}
+  - {fileID: 1202669159225782, guid: 2e47c00ad2a81f54699281bed2d48970, type: 2}
+  - {fileID: 1612720295652792, guid: bcb3b3eac159a6f4d81ff51fd87046e8, type: 2}
+  - {fileID: 1183344390162416, guid: b8cd9c4d02ab9a845bb8d38bd0b7fc15, type: 2}
+  - {fileID: 1309156863223220, guid: b3653037129f94e4293ffb8f08b21df1, type: 2}
+  - {fileID: 1047859624194534, guid: 92e1aeea87e68424ead392bfeb75979b, type: 2}
+  - {fileID: 1884514819830860, guid: 1dc556ca451f337499964255d9ef531d, type: 2}
+  - {fileID: 1687548929208260, guid: acf32b152b98df74da532805b991792a, type: 2}
+  - {fileID: 1279026950544690, guid: ac7aef79dd0abbf4dbedd7154771a6f5, type: 2}
+  - {fileID: 1683928416986092, guid: 56792901e8af3914fbbfc381319d11fe, type: 2}
+  - {fileID: 1152122326308084, guid: 04e7d03eeb453a7428ed7b1b3ebfc9c6, type: 2}
+  - {fileID: 1217826967656202, guid: 60b52d291e011e846ab22e2b757c07e7, type: 2}
+  - {fileID: 1560031000674770, guid: 13d9f1e072b587642a6d56b532fb32c4, type: 2}
   createdLevel: []
   challengeLevels: []
   challengeLevelCreated: []

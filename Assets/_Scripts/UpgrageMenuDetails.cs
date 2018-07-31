@@ -44,7 +44,7 @@ public class UpgrageMenuDetails : MonoBehaviour {
 
     public void UpdateMenu()
 	{
-        float coin = PlayerPrefs.GetFloat("Total_Coins", 0);
+        float coin = PlayerPrefs.GetFloat("Total_Coins", 10000000);
         if(coin.ToString().Length <4)
         {
             CurrentCoinText.text = coin.ToString();  

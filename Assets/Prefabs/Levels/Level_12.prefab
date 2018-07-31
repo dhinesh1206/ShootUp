@@ -175,7 +175,6 @@ GameObject:
   - component: {fileID: 212787882326102648}
   - component: {fileID: 114653309842736710}
   - component: {fileID: 60897814358673182}
-  - component: {fileID: 114165663214327036}
   m_Layer: 0
   m_Name: Triangle (4)
   m_TagString: Untagged
@@ -230,7 +229,6 @@ GameObject:
   - component: {fileID: 212104955358408126}
   - component: {fileID: 114786371583264032}
   - component: {fileID: 60909267256220144}
-  - component: {fileID: 114749284515915198}
   m_Layer: 0
   m_Name: Triangle (6)
   m_TagString: Untagged
@@ -454,7 +452,6 @@ GameObject:
   - component: {fileID: 212136614550444726}
   - component: {fileID: 114461179047276854}
   - component: {fileID: 60074154978175168}
-  - component: {fileID: 114154541192285834}
   m_Layer: 0
   m_Name: Triangle (2)
   m_TagString: Untagged
@@ -531,7 +528,6 @@ GameObject:
   - component: {fileID: 212895716382445108}
   - component: {fileID: 114117064167224838}
   - component: {fileID: 60663620572004004}
-  - component: {fileID: 114348169792509240}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -569,7 +565,6 @@ GameObject:
   - component: {fileID: 212408667028029984}
   - component: {fileID: 114461362664033586}
   - component: {fileID: 60450606375799724}
-  - component: {fileID: 114458201714987566}
   m_Layer: 0
   m_Name: Triangle (1)
   m_TagString: Untagged
@@ -777,7 +772,6 @@ GameObject:
   - component: {fileID: 212312645684892696}
   - component: {fileID: 114358920467327088}
   - component: {fileID: 60279301575804722}
-  - component: {fileID: 114943102511956526}
   m_Layer: 0
   m_Name: Triangle (7)
   m_TagString: Untagged
@@ -885,7 +879,6 @@ GameObject:
   - component: {fileID: 212780748386270860}
   - component: {fileID: 114120075562913302}
   - component: {fileID: 60087844993313356}
-  - component: {fileID: 114093283224873850}
   m_Layer: 0
   m_Name: Triangle (5)
   m_TagString: Untagged
@@ -980,7 +973,6 @@ GameObject:
   - component: {fileID: 212328720267378660}
   - component: {fileID: 114912801658167854}
   - component: {fileID: 60846969429119338}
-  - component: {fileID: 114102961592274852}
   m_Layer: 0
   m_Name: Triangle (3)
   m_TagString: Untagged
@@ -4104,30 +4096,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelname: 
---- !u!114 &114093283224873850
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690270877316862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelname: 
---- !u!114 &114102961592274852
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1753940843064268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelname: 
 --- !u!114 &114108069483191236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4241,36 +4209,12 @@ MonoBehaviour:
   defaultHitCount: 0
   easetype: 24
   particals: 0
---- !u!114 &114154541192285834
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1299153876483214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelname: 
 --- !u!114 &114162250590139088
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1169196375388230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelname: 
---- !u!114 &114165663214327036
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1098207218330122}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}
@@ -4458,18 +4402,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9452be347fecc49a691508bcc8f3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114348169792509240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1341525849836054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelname: 
 --- !u!114 &114358920467327088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4555,18 +4487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9452be347fecc49a691508bcc8f3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114458201714987566
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1441538704060558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelname: 
 --- !u!114 &114461179047276854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4970,18 +4890,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelname: 
---- !u!114 &114749284515915198
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1140664069049800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelname: 
 --- !u!114 &114758214964484814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5190,18 +5098,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravityScale: 0.8
   destroyTime: 20
---- !u!114 &114943102511956526
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1621347820485160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dbed554aacf4aa9a5d9db04d8f8e54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelname: 
 --- !u!114 &114943393239627796
 MonoBehaviour:
   m_ObjectHideFlags: 1

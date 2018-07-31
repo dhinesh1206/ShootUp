@@ -41,8 +41,6 @@ public class LevelCreation : MonoBehaviour {
             levelCreated.transform.SetParent(null);
             createdLevel.Add(levelPrefabs[Index]);
             levelPrefabs.Remove(levelPrefabs[Index]);
-            //CancelInvoke("Reload1Screen");
-            //Invoke("Reload1Screen", 20f);
         }
         else
         {
@@ -78,21 +76,13 @@ public class LevelCreation : MonoBehaviour {
 
     void On_GameOver()
     {
-        CancelInvoke();
+        CancelInvoke("CreateNextLevel");
     }
 
 
     private void On_LevelReload()
     {
         LevelReload();
-        
-       // CancelInvoke("Reload1Screen");
-       // Invoke("Reload1Screen", 20f);
-    }
-
-    private void Reload1Screen()
-    {
-        EventManager.instance.OnGameOver();
     }
 
 	private void OnTriggerExit2D(Collider2D collision)

@@ -65,8 +65,7 @@ public class EventManager : MonoBehaviour {
         if(On_ClearObjects!= null)
         {
             On_ClearObjects();
-            CancelInvoke();
-            Invoke("OnLevelReload", 0.5f);
+          
         }
     }
 }
