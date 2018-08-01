@@ -121,7 +121,7 @@ public class ScoreManagement : MonoBehaviour {
             gameoverHighScoreText.text = (highScore / 1000).ToString("f1") + "k";
         }
         EventManager.instance.OnClearObjects();
-        CoinsCollectedSoFar = PlayerPrefs.GetFloat("Total_Coins", 0);
+
        // gameOverTotalCoinText.text = CoinsCollectedSoFar.ToString();
         retryCost = (defaultRestartCost * UpgradeManager.instance.damageUpgradeLevel * UpgradeManager.instance.intervalUpgradeLevel)+ (levelCrossed*50);
         PlayerPrefs.SetFloat("HighScore", highScore);
@@ -150,6 +150,7 @@ public class ScoreManagement : MonoBehaviour {
 
     void TotalCoins()
     {
+        CoinsCollectedSoFar = PlayerPrefs.GetFloat("Total_Coins", 0);
         CoinsCollectedSoFar += scoreMultiplier * UpgradeManager.instance.hitCount;
      //   gameOverTotalCoinText.text = CoinsCollectedSoFar.ToString();
         PlayerPrefs.SetFloat("Total_Coins", CoinsCollectedSoFar);
