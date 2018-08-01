@@ -21,7 +21,6 @@ public class LevelColor : MonoBehaviour {
         } else 
         {
             int index = Random.Range(0, 2);
-            print(index);
             if(index == 0) 
             {
                 ParticalManager.instance.currentColor = levelBackgroundColor;

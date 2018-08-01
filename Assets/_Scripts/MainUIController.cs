@@ -12,7 +12,7 @@ public class MainUIController : MonoBehaviour {
 
     private void Awake()
     {
-      // PlayerPrefs.DeleteAll();
+       // PlayerPrefs.DeleteAll();
         instance = this;
         CheckMute();
         GameAnalytics.Initialize();

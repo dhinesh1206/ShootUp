@@ -62,6 +62,7 @@ public class UpgrageMenuDetails : MonoBehaviour {
                 if (upgradeManager.damageUpgradeCosts.Count > damageLevel)
                 {
                     nextDamageLevel.text = "LEVEL  " + (damageLevel).ToString();
+                    nextDamageRate2.text = cost.upgradeCost.ToString();
                     // print(coin > cost.upgradeCost);
                     nextDamageRate.text = cost.upgradeCost.ToString();
                     if (coin > cost.upgradeCost)
@@ -106,6 +107,7 @@ public class UpgrageMenuDetails : MonoBehaviour {
                     nextIntervalLevel.text = "LEVEL  " + (intervalLvel).ToString();
                     // print(coin > cost.upgradeCost);
                     nextIntervalRate.text = cost.upgradeCost.ToString();
+                    nextIntervalRate2.text = cost.upgradeCost.ToString();
                     if (coin > cost.upgradeCost)
                     {
                         
