@@ -32,7 +32,7 @@ public class UpgrageMenuDetails : MonoBehaviour {
         }
         else
         {
-            highScoreText.text = (highScore / 1000).ToString() + "k";
+            highScoreText.text = (highScore / 1000).ToString("f1") + "k";
         }
     }
 
@@ -49,7 +49,7 @@ public class UpgrageMenuDetails : MonoBehaviour {
         {
             CurrentCoinText.text = coin.ToString();  
         } else {
-            CurrentCoinText.text = (coin / 1000).ToString("f2") + "K";
+            CurrentCoinText.text = (coin / 1000).ToString("f1") + "K";
         }
 
         float damageLevel = PlayerPrefs.GetFloat("Damage_Level", 1);
@@ -62,9 +62,21 @@ public class UpgrageMenuDetails : MonoBehaviour {
                 if (upgradeManager.damageUpgradeCosts.Count > damageLevel)
                 {
                     nextDamageLevel.text = "LEVEL  " + (damageLevel).ToString();
-                    nextDamageRate2.text = cost.upgradeCost.ToString();
+
                     // print(coin > cost.upgradeCost);
-                    nextDamageRate.text = cost.upgradeCost.ToString();
+                    if(cost.upgradeCost.ToString().Length < 4)
+                    {
+                        nextDamageRate2.text = cost.upgradeCost.ToString();
+                        nextDamageRate.text = cost.upgradeCost.ToString();  
+                       
+                    } 
+                    else
+                    {
+                        nextDamageRate.text = (cost.upgradeCost / 1000).ToString() + "K";
+                        nextDamageRate2.text = (cost.upgradeCost / 1000).ToString() + "K";
+                    }
+
+                  
                     if (coin > cost.upgradeCost)
                     {
                         upgradeLevelUpgradeButton.enabled = true;
@@ -106,8 +118,19 @@ public class UpgrageMenuDetails : MonoBehaviour {
                 {
                     nextIntervalLevel.text = "LEVEL  " + (intervalLvel).ToString();
                     // print(coin > cost.upgradeCost);
-                    nextIntervalRate.text = cost.upgradeCost.ToString();
-                    nextIntervalRate2.text = cost.upgradeCost.ToString();
+
+                    if (cost.upgradeCost.ToString().Length < 4)
+                    {
+                        nextIntervalRate.text = cost.upgradeCost.ToString();
+                        nextIntervalRate2.text = cost.upgradeCost.ToString();
+
+                    }
+                    else
+                    {
+                        nextIntervalRate.text = (cost.upgradeCost / 1000).ToString() + "K";
+                        nextIntervalRate2.text = (cost.upgradeCost / 1000).ToString() + "K";
+                    }
+                   
                     if (coin > cost.upgradeCost)
                     {
                         

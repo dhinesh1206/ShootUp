@@ -85,6 +85,7 @@ public class MainUIController : MonoBehaviour {
 
     public void RestartGame()
     {
+       
         SceneManager.LoadScene(0);
     }
 

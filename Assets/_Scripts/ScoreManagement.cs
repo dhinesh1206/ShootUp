@@ -49,11 +49,12 @@ public class ScoreManagement : MonoBehaviour {
     {
         score += scoreMultiplier * UpgradeManager.instance.hitCount;
         ScoreAdd();
+        TotalCoins();
     }
 
     void On_LevelReload()
     {
-        score = 0;
+       
         scoreText.text = score.ToString();
     }
 
@@ -68,7 +69,7 @@ public class ScoreManagement : MonoBehaviour {
             }
             else
             {
-                scoreText.text = (score / 1000).ToString("f2") + "k";
+                scoreText.text = (score / 1000).ToString("f1") + "k";
             }
             HighScoremanager();
             scoreText.transform.DOScale(1f, 0.1f).SetEase(Ease.Linear);
@@ -108,7 +109,7 @@ public class ScoreManagement : MonoBehaviour {
         }
         else
         {
-            gameOverScoreText.text = (score / 1000).ToString() + "k";
+            gameOverScoreText.text = (score / 1000).ToString("f1") + "k";
         }
 
         if (highScore.ToString().Length < 4)
@@ -117,7 +118,7 @@ public class ScoreManagement : MonoBehaviour {
         }
         else
         {
-            gameoverHighScoreText.text = (highScore / 1000).ToString() + "k";
+            gameoverHighScoreText.text = (highScore / 1000).ToString("f1") + "k";
         }
         EventManager.instance.OnClearObjects();
         CoinsCollectedSoFar = PlayerPrefs.GetFloat("Total_Coins", 0);
@@ -125,10 +126,10 @@ public class ScoreManagement : MonoBehaviour {
         retryCost = (defaultRestartCost * UpgradeManager.instance.damageUpgradeLevel * UpgradeManager.instance.intervalUpgradeLevel)+ (levelCrossed*50);
         PlayerPrefs.SetFloat("HighScore", highScore);
         retrycostText.text = "$" + Mathf.Round(retryCost).ToString();
-        CoinAnimation();
+
     }
 
-    void CoinAnimation()
+    public  void CoinAnimation()
     {
         //for (int i = 1; i < coins; i++)
         //{
@@ -142,14 +143,14 @@ public class ScoreManagement : MonoBehaviour {
         //    //});
         //}
         //StartCoroutine(TotalCoinAnimation(coins));
-        CoinsCollected = score;
+       // CoinsCollected = score;
        // gameOverCoinText.text = CoinsCollected.ToString();
         TotalCoins();
     }
 
     void TotalCoins()
     {
-        CoinsCollectedSoFar += score;
+        CoinsCollectedSoFar += scoreMultiplier * UpgradeManager.instance.hitCount;
      //   gameOverTotalCoinText.text = CoinsCollectedSoFar.ToString();
         PlayerPrefs.SetFloat("Total_Coins", CoinsCollectedSoFar);
     }

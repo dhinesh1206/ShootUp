@@ -139,13 +139,15 @@ public class LevelCreation : MonoBehaviour
     public void LevelReload()
     {
 
-        foreach (GameObject levelcreatedbefore in createdLevel)
+        for (int i = 0; i < levels.Count; i++)
         {
-            if (levelcreatedbefore.name == deadLevel)
+            foreach (var item in levels[i].createdList)
             {
-
-                GameObject levelCreated = Instantiate(levelcreatedbefore, transform, false);
-                levelCreated.transform.SetParent(null);
+                if(item.name == deadLevel)
+                {
+                    GameObject levelCreated = Instantiate(item, transform, false);
+                    levelCreated.transform.SetParent(null);
+                }
             }
         }
     }
