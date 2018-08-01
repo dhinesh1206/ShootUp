@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class UpgrageMenuDetails : MonoBehaviour {
 
     public static UpgrageMenuDetails instance;
-    public Text CurrentCoinText, nextDamageLevel, nextIntervalLevel, nextDamageRate, nextIntervalRate,highScoreText;
-    public Button upgradeLevelUpgradeButton, intervalLevelUpgradeButton;
+    public Text CurrentCoinText, nextDamageLevel, nextIntervalLevel, nextDamageRate, nextIntervalRate,highScoreText,nextDamageRate2, nextIntervalRate2;
+    public Button upgradeLevelUpgradeButton, intervalLevelUpgradeButton,upgradeLevelUpgradeButton2, intervalLevelUpgradeButton2;
     public GameObject intervalIndiCatorNormal, damageIndicatorNormal,intervalIndicatorAnimater,damageupgradeIndicatorAnimated;
 
 
@@ -44,7 +44,7 @@ public class UpgrageMenuDetails : MonoBehaviour {
 
     public void UpdateMenu()
 	{
-        float coin = PlayerPrefs.GetFloat("Total_Coins", 10000000);
+        float coin = PlayerPrefs.GetFloat("Total_Coins", 0);
         if(coin.ToString().Length <4)
         {
             CurrentCoinText.text = coin.ToString();  
@@ -67,12 +67,18 @@ public class UpgrageMenuDetails : MonoBehaviour {
                     if (coin > cost.upgradeCost)
                     {
                         upgradeLevelUpgradeButton.enabled = true;
+                        upgradeLevelUpgradeButton2.enabled = true;
+                        upgradeLevelUpgradeButton.gameObject.SetActive(false);
+                        upgradeLevelUpgradeButton2.gameObject.SetActive(true);
                         damageIndicatorNormal.SetActive(false);
                         damageupgradeIndicatorAnimated.SetActive(true);
                     }
                     else
                     {
                         upgradeLevelUpgradeButton.enabled = false;
+                        upgradeLevelUpgradeButton2.enabled = false;
+                        upgradeLevelUpgradeButton.gameObject.SetActive(true);
+                        upgradeLevelUpgradeButton2.gameObject.SetActive(false);
                         damageIndicatorNormal.SetActive(true);
                         damageupgradeIndicatorAnimated.SetActive(false);
                       //  damageIndicator.color = normalColor;
@@ -82,6 +88,7 @@ public class UpgrageMenuDetails : MonoBehaviour {
                 {
                     nextDamageLevel.text = "MAX OUT";
                     nextDamageRate.text = "-";
+                    nextDamageRate2.text = "-";
                 }
             }
         }
@@ -101,15 +108,24 @@ public class UpgrageMenuDetails : MonoBehaviour {
                     nextIntervalRate.text = cost.upgradeCost.ToString();
                     if (coin > cost.upgradeCost)
                     {
+                        
                         intervalLevelUpgradeButton.enabled = true;
+                        intervalLevelUpgradeButton2.enabled = true;
+
+                        intervalLevelUpgradeButton.gameObject.SetActive(false);
+                        intervalLevelUpgradeButton2.gameObject.SetActive(true);
                         intervalIndicatorAnimater.SetActive(true);
                         intervalIndiCatorNormal.SetActive(false);
                        
                     }
                     else
                     {
+
                         intervalLevelUpgradeButton.enabled = false;
-                       
+                        intervalLevelUpgradeButton2.enabled = false;
+                        intervalLevelUpgradeButton.gameObject.SetActive(true);
+                        intervalLevelUpgradeButton2.gameObject.SetActive(false);
+
                         intervalIndicatorAnimater.SetActive(false);
                         intervalIndiCatorNormal.SetActive(true);
                     }
@@ -118,6 +134,7 @@ public class UpgrageMenuDetails : MonoBehaviour {
                 {
                     nextIntervalLevel.text = "MAX OUT";
                     nextIntervalRate.text = "-";
+                    nextIntervalRate2.text = "-";
                 }
             }
         }
