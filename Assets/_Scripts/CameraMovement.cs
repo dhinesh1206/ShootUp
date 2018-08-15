@@ -8,16 +8,16 @@ public class CameraMovement : MonoBehaviour {
 
     private void OnEnable()
     {
-        EventManager.instance.On_LevelCreate += On_LevelCreate;
-        EventManager.instance.On_GameOver += On_GameOver;
-        EventManager.instance.On_LevelReload += On_LevelReload;
+       // EventManager.instance.On_LevelCreate += On_LevelCreate;
+       // EventManager.instance.On_MainGameOver += On_GameOver;
+       // EventManager.instance.On_LevelReload += On_LevelReload;
     }
 
     private void OnDisable()
     {
-        EventManager.instance.On_LevelCreate -= On_LevelCreate;
-        EventManager.instance.On_GameOver -= On_GameOver;
-        EventManager.instance.On_LevelReload -= On_LevelReload;
+       // EventManager.instance.On_LevelCreate -= On_LevelCreate;
+       // EventManager.instance.On_MainGameOver -= On_GameOver;
+      //  EventManager.instance.On_LevelReload -= On_LevelReload;
     }
 
     private void On_LevelCreate()

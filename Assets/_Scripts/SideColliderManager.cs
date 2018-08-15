@@ -17,7 +17,8 @@ public class SideColliderManager : MonoBehaviour {
         {
             if (entryPoint != Vector3.zero)
             {
-                EventManager.instance.OnScoreAdd();
+                GameManager.instance.ScoreAdd();
+                //EventManager.instance.OnScoreAdd();
                // Vector3 screenPoint = Camera.main.WorldToScreenPoint(entryPoint);
                // GameObject createdScoreimage = Instantiate(plus1Prefab, imageCanves.transform, false);
                // createdScoreimage.transform.position = screenPoint;

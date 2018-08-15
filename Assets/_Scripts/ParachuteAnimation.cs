@@ -5,30 +5,36 @@ using DG.Tweening;
 
 public class ParachuteAnimation : MonoBehaviour {
 
+    public static ParachuteAnimation instance;
     public GameObject danceParentTransform;
     public GameObject[] danceAnimations,loonParts;
     Color defaultcolor;
 
-	private void Start()
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    private void Start()
 	{
         defaultcolor = loonParts[0].GetComponent<SpriteRenderer>().color;
 	}
 
 	private void OnEnable()
 	{
-        EventManager.instance.On_GameOver+= Instance_On_GameOver;
-        EventManager.instance.On_LevelReload += Instance_On_LevelReload;
+       // EventManager.instance.On_MainGameOver+= GameOver;
+       // EventManager.instance.On_LevelReload += LevelReload;
 	}
 
 	private void OnDisable()
 	{
-        EventManager.instance.On_GameOver -= Instance_On_GameOver;
-        EventManager.instance.On_LevelReload -= Instance_On_LevelReload;
+       // EventManager.instance.On_MainGameOver -= GameOver;
+       // EventManager.instance.On_LevelReload -= LevelReload;
 	}
 
 
 
-    void Instance_On_LevelReload()
+    public void LevelReload()
     {
         foreach (GameObject item in loonParts)
         {
@@ -41,13 +47,12 @@ public class ParachuteAnimation : MonoBehaviour {
     }
 
 
-    void Instance_On_GameOver()
+    public void GameOver()
     {
         foreach (GameObject item in loonParts)
         {
             item.SetActive(false);
         }
-       
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
     }
 

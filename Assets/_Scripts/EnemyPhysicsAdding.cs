@@ -13,7 +13,8 @@ public class EnemyPhysicsAdding : MonoBehaviour {
         {
             
             ParticalManager.instance.CreatePartical(collision.contacts[0].point);
-            EventManager.instance.OnScoreAdd();
+            //EventManager.instance.OnScoreAdd();
+            GameManager.instance.ScoreAdd();
         }
         playerCollided = true;
         transform.SetParent(null);

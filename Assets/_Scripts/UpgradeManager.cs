@@ -32,7 +32,6 @@ public class UpgradeManager : MonoBehaviour {
         {
             interval = intervalUpgradeValue;
         }
-
 	}
 
     public void damageUpgrade()

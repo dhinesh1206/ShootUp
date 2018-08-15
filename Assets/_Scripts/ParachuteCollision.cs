@@ -15,9 +15,17 @@ public class ParachuteCollision : MonoBehaviour {
         if(collision.gameObject.tag != "Player" && !hit)
         {
             hit = true;
-            LevelCreation.instance.DeathLevel(collision.gameObject.GetComponent<ClearObjects>().levelname);
+            //LevelCreation.instance.DeathLevel(collision.gameObject.GetComponent<ClearObjects>().levelname);
+            if (!GameManager.instance.challengeModeActive)
+            {
+                GameManager.instance.DeathLevel(collision.gameObject.GetComponent<ClearObjects>().levelname);
+                GameManager.instance.GameOver();
+            } else {
+                GameManager.instance.ChallengeGameOver();
+            }
             audioSource.Play();
-            EventManager.instance.OnGameOver();
+            // EventManager.instance.OnGameOver();
+
         }
     }
 }

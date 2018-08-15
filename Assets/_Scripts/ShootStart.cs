@@ -24,7 +24,7 @@ public class ShootStart : MonoBehaviour {
 
         float aspect = (float)Screen.height / (float)Screen.width;
 
-        print(aspect);
+       // print(aspect);
         if (aspect > 1.8f)
             GetComponent<Camera>().orthographicSize = 11.85f;
         else if(aspect < 1.5f)

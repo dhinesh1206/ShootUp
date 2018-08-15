@@ -8,6 +8,7 @@ public class MainUIController : MonoBehaviour {
     public static MainUIController instance;
 
     public GameObject mainScreen, ingameScreen, gameOverScreen,playButton,muteOnButton,muteOffButton;
+    public GameObject[] LockImaged;
 
 
     private void Awake()
@@ -17,20 +18,23 @@ public class MainUIController : MonoBehaviour {
         CheckMute();
         GameAnalytics.Initialize();
         Facebook.Unity.FB.Init();
+        CheckCompletedChallenges();
     }
     private void OnEnable()
     {
-        EventManager.instance.On_LevelCreate += On_LevelCreate;
-        EventManager.instance.On_LevelReload += On_LevelReload;
-        EventManager.instance.On_GameOver += On_GameOver;
+       // EventManager.instance.On_LevelCreate += On_LevelCreate;
+       // EventManager.instance.On_LevelReload += On_LevelReload;
+       // EventManager.instance.On_MainGameOver += On_GameOver;
+       // EventManager.instance.On_ChallengeGameOver +=On_ChallengeGameOver;
         
     }
 
     private void OnDisable()
     {
-        EventManager.instance.On_LevelCreate -= On_LevelCreate;
-        EventManager.instance.On_LevelReload -= On_LevelReload;
-        EventManager.instance.On_GameOver -= On_GameOver;
+       // EventManager.instance.On_LevelCreate -= On_LevelCreate;
+       // EventManager.instance.On_LevelReload -= On_LevelReload;
+       // EventManager.instance.On_MainGameOver -= On_GameOver;
+       // EventManager.instance.On_ChallengeGameOver -= On_ChallengeGameOver;
     }
 
     private void On_LevelReload()
@@ -119,4 +123,19 @@ public class MainUIController : MonoBehaviour {
     {
         ScoreManagement.instance.RetryLevel();
     }
+
+    public void CheckCompletedChallenges()
+    {
+        for (int i = 0; i < LockImaged.Length;i++){
+            if((PlayerPrefs.GetString("Level"+i.ToString(),"NotComplete")) == "Completed"){
+                LockImaged[i].SetActive(false);
+            }
+        }
+    }
+
+    public void On_ChallengeGameOver()
+    {
+        
+    }
+
 }

@@ -19,7 +19,6 @@ public class ClearObjects : MonoBehaviour {
             string[] name = gameObject.name.Split('(');
             levelname = name[0];
         }
-       // print(levelname);
     }
 
     private void OnEnable()
@@ -37,7 +36,6 @@ public class ClearObjects : MonoBehaviour {
         Destroy(gameObject);
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.transform.tag == "Level_End")
@@ -48,5 +46,4 @@ public class ClearObjects : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-
 }

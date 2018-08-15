@@ -31,18 +31,18 @@ public class ScoreManagement : MonoBehaviour {
     }
     private void OnEnable()
     {
-        EventManager.instance.On_ScoreAdd += On_ScoreAdd;
-        EventManager.instance.On_GameOver += On_GameOver;
-        EventManager.instance.On_LevelCreate += On_LevelCreate;
-        EventManager.instance.On_LevelReload += On_LevelReload;
+       // EventManager.instance.On_ScoreAdd += On_ScoreAdd;
+       // EventManager.instance.On_MainGameOver += On_GameOver;
+       // EventManager.instance.On_LevelCreate += On_LevelCreate;
+       // EventManager.instance.On_LevelReload += On_LevelReload;
     }
 
     private void OnDisable()
     {
-        EventManager.instance.On_ScoreAdd -= On_ScoreAdd;
-        EventManager.instance.On_GameOver -= On_GameOver;
-        EventManager.instance.On_LevelCreate -= On_LevelCreate;
-        EventManager.instance.On_LevelReload -= On_LevelReload;
+       // EventManager.instance.On_ScoreAdd -= On_ScoreAdd;
+       // EventManager.instance.On_MainGameOver -= On_GameOver;
+       // EventManager.instance.On_LevelCreate -= On_LevelCreate;
+      //  EventManager.instance.On_LevelReload -= On_LevelReload;
     }
 
     private void On_ScoreAdd()
@@ -125,7 +125,13 @@ public class ScoreManagement : MonoBehaviour {
        // gameOverTotalCoinText.text = CoinsCollectedSoFar.ToString();
         retryCost = (defaultRestartCost * UpgradeManager.instance.damageUpgradeLevel * UpgradeManager.instance.intervalUpgradeLevel)+ (levelCrossed*50);
         PlayerPrefs.SetFloat("HighScore", highScore);
-        retrycostText.text = "$" + Mathf.Round(retryCost).ToString();
+
+
+        if(retryCost.ToString().Length<4){
+            retrycostText.text = "$" + Mathf.Round(retryCost).ToString();
+        } else {
+            retrycostText.text = "$" + Mathf.Round(retryCost / 1000).ToString()+"K";
+        }
 
     }
 
